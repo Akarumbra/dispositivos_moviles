@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "398415773391",
+    "project_id": "dispositivosmoviles-26d5b",
+    "storage_bucket": "dispositivosmoviles-26d5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398415773391:android:4a7520f66367894ea101ba",
+        "android_client_info": {
+          "package_name": "com.raul.dispositivos_moviles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398415773391-86nafh7mt3loechl2jc31ft0or7k60q1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKBICqNAnQtwtjth200RccxPBgMYUJirE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398415773391-86nafh7mt3loechl2jc31ft0or7k60q1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
