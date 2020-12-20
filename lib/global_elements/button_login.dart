@@ -4,6 +4,9 @@ import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 class ButtonLogIn extends StatefulWidget {
 
+  final VoidCallback onPressed;
+  ButtonLogIn(this.onPressed);
+
   @override
   State createState() {
     return _ButtonLogIn();
@@ -12,17 +15,11 @@ class ButtonLogIn extends StatefulWidget {
 
 class _ButtonLogIn extends State<ButtonLogIn> {
 
-  AppUser appUser;
-
   @override
   Widget build(BuildContext context) {
 
-    appUser = BlocProvider.of(context);
-
     return InkWell(
-      onTap: (){
-        appUser.signIn();
-      },
+      onTap: widget.onPressed,
       child: Container(
         margin: EdgeInsets.only(
           top: 30.0,

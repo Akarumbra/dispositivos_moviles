@@ -2,13 +2,20 @@ import 'package:dispositivos_moviles/main.dart';
 import 'package:flutter/material.dart';
 import 'package:dispositivos_moviles/pages/calculator.dart';
 import 'package:dispositivos_moviles/pages/nosotros.dart';
+import 'package:dispositivos_moviles/User/app_user.dart';
+import 'package:dispositivos_moviles/User/screens/signin_screen.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 class MainScreen extends StatefulWidget {
+
   @override
   _MainScreen createState() => _MainScreen();
 }
 
 class _MainScreen extends State<MainScreen> {
+
+  AppUser appUser;
+
   List<Container> list = List();
   var arr = [
     {"name": "Legs", "Image": "gym.jpg", "exercise": "Workout with bar"},
@@ -69,6 +76,7 @@ class _MainScreen extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
+    appUser = BlocProvider.of(context);
     return Scaffold(
       appBar: new AppBar(
         title: new Text('Fitness'),
@@ -108,6 +116,11 @@ class _MainScreen extends State<MainScreen> {
         mainAxisSpacing: 1.0,
         childAspectRatio: 0.899,
         children: list,
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.orange,
+        onPressed: appUser.signOut,
+        child: Icon(Icons.exit_to_app),
       ),
     );
   }

@@ -13,7 +13,7 @@ class BackgroundLogIn extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
           gradient: LinearGradient(
-              colors: [Colors.green, Colors.greenAccent],
+              colors: [Colors.deepOrange, Colors.orangeAccent],
               begin: FractionalOffset(0.2, 0.0),
               end: FractionalOffset(1.0, 0.6),
               stops: [0.0, 0.6],

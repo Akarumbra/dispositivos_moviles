@@ -20,4 +20,9 @@ class FirebaseAuthentication {
 
     return user;
   }
+
+  signOut() async {
+   await _auth.signOut();
+   googleSignIn.signOut();
+  }
 }

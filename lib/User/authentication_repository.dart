@@ -6,4 +6,6 @@ class AuthenticationRepository  {
   final _firebaseAuthentication = FirebaseAuthentication();
 
   Future<User> signInFirebase() => _firebaseAuthentication.signIn();
+
+  signOut() => _firebaseAuthentication.signOut();
 }

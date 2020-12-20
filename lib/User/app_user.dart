@@ -13,6 +13,10 @@ class AppUser implements Bloc {
     return _authenticationRepository.signInFirebase();
   }
 
+  signOut() {
+    _authenticationRepository.signOut();
+  }
+
   @override
   void dispose() {
     // TODO: implement dispose
