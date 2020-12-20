@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:dispositivos_moviles/User/app_user.dart';
 import 'package:dispositivos_moviles/User/screens/signin_screen.dart';
+import 'package:dispositivos_moviles/User/screens/main_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
@@ -13,7 +14,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
- Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return BlocProvider(
         child: MaterialApp(
           title: 'Dispositivos móviles',
