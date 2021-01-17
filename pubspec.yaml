@@ -56,8 +56,13 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-    - assets/gym.jpeg
-    - assets/pressbanca.jpg
+    - img/gym.jpeg
+    - img/pressbanca.jpg
+    - img/remo.jpeg
+    - img/pressfrances.jpg
+    - img/curl.jpg
+    - img/infodeadlift.jpg
+    - img/benchinfo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

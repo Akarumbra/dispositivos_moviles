@@ -1,33 +1,28 @@
 import 'package:dispositivos_moviles/main.dart';
 import 'package:flutter/material.dart';
-import 'package:dispositivos_moviles/pages/calculator.dart';
-import 'package:dispositivos_moviles/pages/nosotros.dart';
+import 'package:dispositivos_moviles/User/screens/calculator.dart';
+import 'package:dispositivos_moviles/User/screens/nosotros.dart';
 import 'package:dispositivos_moviles/User/app_user.dart';
 import 'package:dispositivos_moviles/User/screens/signin_screen.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 class MainScreen extends StatefulWidget {
-
   @override
   _MainScreen createState() => _MainScreen();
 }
 
 class _MainScreen extends State<MainScreen> {
-
   AppUser appUser;
 
   List<Container> list = List();
   var arr = [
-    {"name": "Legs", "Image": "gym.jpg", "exercise": "Workout with bar"},
+    {"name": "Deadlift", "img": "gym.jpeg", "sport": "img/infodeadlift.jpg"},
+    {"name": "Chest", "img": "pressbanca.jpg", "sport": "img/benchinfo.png"},
+    {"name": "Back", "img": "remo.jpeg", "sport": "Row with bar, 10 reps"},
     {
-      "name": "Chest",
-      "Image": "pressbanca.jpg",
-      "exercise": "Workout with bar"
-    },
-    {
-      "name": "Legs",
-      "Image": "gym.jpg",
-      "exercise": "Workout with bar 10 reps of 80kg"
+      "name": "Biceps",
+      "img": "curl.jpg",
+      "sport": "Workout with bar 10 reps of 80kg"
     },
   ];
 
@@ -47,11 +42,9 @@ class _MainScreen extends State<MainScreen> {
                 child: new InkWell(
                   onTap: () => Navigator.of(context).push(new MaterialPageRoute(
                     builder: (BuildContext context) => new Detalle(
-                        name: arrxyz['nombre'],
-                        img: img,
-                        sport: arrxyz['exercise']),
+                        name: arrxyz['name'], img: img, sport: arrxyz['sport']),
                   )),
-                  child: new Image.asset("assets/$img", fit: BoxFit.contain),
+                  child: new Image.asset("img/$img", fit: BoxFit.contain),
                 ),
               ),
             ),
@@ -86,11 +79,11 @@ class _MainScreen extends State<MainScreen> {
         child: new ListView(children: <Widget>[
           new UserAccountsDrawerHeader(
             accountName: new Text('Exercises'),
-            accountEmail: new Text('xd@gmail'),
+            accountEmail: new Text('username@gmail'),
             decoration: new BoxDecoration(
                 image: new DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/pressbanca.jpg'),
+              image: AssetImage('img/pressbanca.jpg'),
             )),
           ),
           new Divider(),
@@ -103,7 +96,7 @@ class _MainScreen extends State<MainScreen> {
           ),
           new Divider(),
           new ListTile(
-            title: new Text("IMC Calculator"),
+            title: new Text("Support"),
             trailing: new Icon(Icons.fitness_center),
             onTap: () => Navigator.of(context).push(new MaterialPageRoute(
               builder: (BuildContext context) => Nosotros(),
@@ -144,7 +137,7 @@ class Detalle extends StatelessWidget {
               child: new Material(
                   child: new InkWell(
                 child: new Image.asset(
-                  "assets/$img",
+                  "img/$img",
                   fit: BoxFit.cover,
                 ),
               ))),
@@ -194,14 +187,8 @@ class IniciarIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: new EdgeInsets.all(10.0),
-        child: new Row(
-          children: <Widget>[
-            new IconTec(icon: Icons.call, tec: "call"),
-            new IconTec(icon: Icons.message, tec: "Whatsapp"),
-            new IconTec(icon: Icons.photo, tec: "Foto"),
-          ],
-        ));
+      padding: new EdgeInsets.all(10.0),
+    );
   }
 }
 
@@ -239,9 +226,8 @@ class Info extends StatelessWidget {
       child: new Card(
         child: new Padding(
           padding: const EdgeInsets.all(10.0),
-          child: new Text(
+          child: new Image.asset(
             sport,
-            style: new TextStyle(fontSize: 15.0, color: Colors.blue),
           ),
         ),
       ),

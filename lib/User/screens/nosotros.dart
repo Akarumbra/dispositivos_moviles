@@ -7,7 +7,9 @@ class Nosotros extends StatelessWidget {
       appBar: new AppBar(
         title: new Text("Who we are"),
       ),
-      body: new Center(),
+      body: new Center(
+        child: new Text('We are learning how to create an app with flutter'),
+      ),
     );
   }
 }
