@@ -1,3 +1,4 @@
+import 'package:dispositivos_moviles/global_elements/navigation_bar.dart';
 import 'package:dispositivos_moviles/main.dart';
 import 'package:flutter/material.dart';
 import 'package:dispositivos_moviles/global_elements/background.dart';
@@ -5,6 +6,7 @@ import 'package:dispositivos_moviles/global_elements/button_login.dart';
 import 'package:dispositivos_moviles/User/app_user.dart';
 import 'package:dispositivos_moviles/User/screens/main_screen.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:dispositivos_moviles/User/screens/profile_screen.dart';
 
 class SignInScreen extends StatefulWidget {
 
@@ -31,7 +33,7 @@ class _SignInScreen extends State<SignInScreen> {
         if (!snapshot.hasData /*|| snapshot.hasError*/) {
           return signInGoogleUI();
         } else {
-          return MainScreen();
+          return NavigationBar();
         }
       },
     );
@@ -53,7 +55,10 @@ class _SignInScreen extends State<SignInScreen> {
                       color: Colors.white,
                       fontWeight: FontWeight.bold),
                 ),
-                ButtonLogIn((){appUser.signIn();})
+                ButtonLogIn((){
+                  appUser.signOut();
+                  appUser.signIn();
+                })
               ],
           )
         ],
