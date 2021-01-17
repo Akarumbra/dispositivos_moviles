@@ -88,7 +88,7 @@ class _MainScreen extends State<MainScreen> {
           ),
           new Divider(),
           new ListTile(
-            title: new Text("IMC Calculator"),
+            title: new Text("BMI Calculator"),
             trailing: new Icon(Icons.fitness_center),
             onTap: () => Navigator.of(context).push(new MaterialPageRoute(
               builder: (BuildContext context) => Calculator(),
