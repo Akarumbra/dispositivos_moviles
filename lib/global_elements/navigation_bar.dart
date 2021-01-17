@@ -19,7 +19,7 @@ class _NavigationBar extends State<NavigationBar> {
   int indexScreen = 0;
 
   final List<Widget> widgetsChildren = [
-    MainScreen(),
+    BlocProvider<AppUser>(bloc: AppUser(), child:MainScreen()),
     BlocProvider<AppUser>(bloc: AppUser(), child: UserProfile())
   ];
   void onScreen(int index) {
