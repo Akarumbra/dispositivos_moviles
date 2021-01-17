@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
         child: MaterialApp(
           title: 'Dispositivos móviles',
-          home: MainScreen(),
+          home: SignInScreen(),
         ),
         bloc: AppUser());
   }

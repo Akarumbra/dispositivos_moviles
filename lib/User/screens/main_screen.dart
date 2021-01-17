@@ -5,6 +5,7 @@ import 'package:dispositivos_moviles/User/screens/nosotros.dart';
 import 'package:dispositivos_moviles/User/app_user.dart';
 import 'package:dispositivos_moviles/User/screens/signin_screen.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:dispositivos_moviles/User/screens/Products.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -16,7 +17,13 @@ class _MainScreen extends State<MainScreen> {
 
   List<Container> list = List();
   var arr = [
-    {"name": "Deadlift", "img": "gym.jpeg", "sport": "img/infodeadlift.jpg"},
+    {
+      "name": "Deadlift",
+      "img": "gym.jpeg",
+      "sport": "img/infodeadlift.jpg",
+      "description":
+          "The deadlift is a weight training exercise in which a loaded barbell or bar is lifted off the ground to the level of the hips, torso perpendicular to the floor, before being placed back on the ground."
+    },
     {
       "name": "Bench press",
       "img": "pressbanca.jpg",
@@ -34,6 +41,11 @@ class _MainScreen extends State<MainScreen> {
       "name": "Pull over",
       "img": "pullover.jpg",
       "sport": "img/infopullover.jpg"
+    },
+    {
+      "name": "Military press",
+      "img": "spress.jpg",
+      "sport": "img/infospress.jpg"
     },
   ];
 
@@ -53,7 +65,10 @@ class _MainScreen extends State<MainScreen> {
                 child: new InkWell(
                   onTap: () => Navigator.of(context).push(new MaterialPageRoute(
                     builder: (BuildContext context) => new Detalle(
-                        name: arrxyz['name'], img: img, sport: arrxyz['sport']),
+                        name: arrxyz['name'],
+                        img: img,
+                        sport: arrxyz['sport'],
+                        description: arrxyz['description']),
                   )),
                   child: new Image.asset("img/$img", fit: BoxFit.contain),
                 ),
@@ -113,6 +128,14 @@ class _MainScreen extends State<MainScreen> {
               builder: (BuildContext context) => Nosotros(),
             )),
           ),
+          new Divider(),
+          new ListTile(
+            title: new Text("Useful Products"),
+            trailing: new Icon(Icons.fitness_center),
+            onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+              builder: (BuildContext context) => Products(),
+            )),
+          ),
         ]),
       ),
       body: new GridView.count(
@@ -126,10 +149,11 @@ class _MainScreen extends State<MainScreen> {
 }
 
 class Detalle extends StatelessWidget {
-  Detalle({this.name, this.img, this.sport});
+  Detalle({this.name, this.img, this.sport, this.description});
   final String name;
   final String img;
   final String sport;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
@@ -161,8 +185,9 @@ class Detalle extends StatelessWidget {
 }
 
 class IniciarNombre extends StatelessWidget {
-  IniciarNombre({this.name});
+  IniciarNombre({this.name, this.description});
   final String name;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
@@ -179,7 +204,7 @@ class IniciarNombre extends StatelessWidget {
                   style: new TextStyle(fontSize: 20.0, color: Colors.blue),
                 ),
                 new Text(
-                  '$name',
+                  "How to do it:",
                   style: new TextStyle(fontSize: 15.0, color: Colors.blueGrey),
                 ),
               ],
