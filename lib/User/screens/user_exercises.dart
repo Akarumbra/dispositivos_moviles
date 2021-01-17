@@ -36,6 +36,10 @@ class _UserExercisesState extends State<UserExercises> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Exercises for today"),
+        backgroundColor: Colors.orange,
+      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.orange,
         onPressed: () {
