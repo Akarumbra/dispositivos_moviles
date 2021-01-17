@@ -43,7 +43,6 @@ class IMC extends State<_Calculator> {
       double d = result;
       d = (d * formula).round() / formula;
 
-      //formula para sugerir el peso de la persona
       double sugerido = (idealW * weight) / d;
       sugerido = (sugerido * formula).round() / formula;
 
@@ -71,7 +70,6 @@ class IMC extends State<_Calculator> {
       double d = result;
       d = (d * formula).round() / formula;
 
-      //formula para sugerir el peso de la persona
       double sugerido = (idealWm * weight) / d;
       sugerido = (sugerido * formula).round() / formula;
 
@@ -90,13 +88,11 @@ class IMC extends State<_Calculator> {
   }
 
   void MathOp() {
-    //realizamos las validaciones si algun campo este vacio
     if (my_form_key.currentState.validate()) {
       double num1 = double.parse(controller_weight.text);
       double num2 = double.parse(controller_height.text);
 
       double result = num1 / num2;
-      //lo puede cambiar por +  o  - o *
 
       setState(() {
         showIMC = "The division is: $result";
@@ -112,10 +108,12 @@ class IMC extends State<_Calculator> {
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Text('BMI calculator'),
-        backgroundColor: Color(0xFFf01DFD7),
+        backgroundColor: Colors.orange,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
-          onPressed: () {GoBack();},
+          onPressed: () {
+            GoBack();
+          },
         ),
       ),
       body: Form(
@@ -128,7 +126,7 @@ class IMC extends State<_Calculator> {
                     width: 500,
                     height: 130,
                     decoration: BoxDecoration(
-                      color: Color(0xFFf01DFD7),
+                      color: Colors.orange,
                       borderRadius: BorderRadius.only(
                           bottomRight: Radius.circular(80),
                           bottomLeft: Radius.circular(80)),
@@ -146,8 +144,6 @@ class IMC extends State<_Calculator> {
                       ],
                     ),
                   ),
-
-                  //agregamos un Container
                   Container(
                     padding: EdgeInsets.only(top: 40),
                     child: Column(
@@ -195,7 +191,7 @@ class IMC extends State<_Calculator> {
                             decoration: InputDecoration(
                                 hintText: "Height Cm",
                                 icon: Icon(Icons.present_to_all,
-                                    color: Colors.blueAccent)),
+                                    color: Colors.orange)),
                             keyboardType: TextInputType.number,
                           ),
                         ),
@@ -234,7 +230,6 @@ class IMC extends State<_Calculator> {
                   Divider(
                     height: 40.0,
                   ),
-                  //caja de resultado
                   Container(
                     height: 50.0,
                     width: 300,
@@ -242,7 +237,6 @@ class IMC extends State<_Calculator> {
                         gradient: LinearGradient(
                             colors: [Color(0xFFFE2E64), Color(0xFFfF781D8)]),
                         borderRadius: BorderRadius.all(Radius.circular(15))),
-                    //creamos resultado del TextFormField
                     child: Center(
                       child: Text(
                         showIMC,
@@ -262,7 +256,6 @@ class IMC extends State<_Calculator> {
                         gradient: LinearGradient(
                             colors: [Color(0xFFf04B4AE), Color(0xFFf81F7F3)]),
                         borderRadius: BorderRadius.all(Radius.circular(15))),
-                    //creamos resultador del TextFormField
                     child: Center(
                       child: Text(
                         suggWeight,
@@ -293,6 +286,7 @@ class IMC extends State<_Calculator> {
               ))),
     );
   }
+
   void GoBack() {
     Navigator.of(context).push(
       MaterialPageRoute(

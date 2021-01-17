@@ -39,6 +39,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+ 
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -74,6 +75,12 @@ flutter:
     - img/infosquat.jpg
     - img/pullover.jpg
     - img/infopullover.jpg
+    - img/spress.jpg
+    - img/infospress.jpg
+    - img/whey.jpg
+    - img/creatine.jpg
+    - img/glutamine.jpg
+    - img/prew.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
