@@ -8,7 +8,7 @@ class Nosotros extends StatelessWidget {
         title: new Text("Who we are"),
       ),
       body: new Center(
-        child: new Text('This app is developed by Raul Moriente & Daniel Ruiz'),
+        child: new Text('This app is developed by Raul Morente & Daniel Ruiz'),
       ),
     );
   }

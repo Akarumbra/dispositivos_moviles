@@ -1,3 +1,4 @@
+import 'package:dispositivos_moviles/User/screens/user_exercises.dart';
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:dispositivos_moviles/User/app_user.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
         child: MaterialApp(
           title: 'Dispositivos móviles',
-          home: MainScreen(),
+          home: SignInScreen(),
         ),
         bloc: AppUser());
   }

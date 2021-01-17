@@ -2,6 +2,7 @@ import 'package:dispositivos_moviles/User/app_user.dart';
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:dispositivos_moviles/User/information/user_information.dart';
+import 'package:dispositivos_moviles/User/screens/user_exercises.dart';
 
 
 class UserProfile extends StatelessWidget {
@@ -51,7 +52,7 @@ class UserProfile extends StatelessWidget {
       print(snapshot.data);
       userinformation = UserInformation(name: snapshot.data.displayName, profileImage: snapshot.data.photoUrl);
       return Container(
-        color: Colors.orange,
+        //color: Colors.orange,
           child: Column(
             children: <Widget>[
               Row(
