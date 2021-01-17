@@ -110,11 +110,6 @@ class _MainScreen extends State<MainScreen> {
         childAspectRatio: 0.899,
         children: list,
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.orange,
-        onPressed: appUser.signOut,
-        child: Icon(Icons.exit_to_app),
-      ),
     );
   }
 }
