@@ -7,6 +7,7 @@ import 'package:dispositivos_moviles/User/screens/signin_screen.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 class MainScreen extends StatefulWidget {
+
   @override
   _MainScreen createState() => _MainScreen();
 }
@@ -78,8 +79,7 @@ class _MainScreen extends State<MainScreen> {
       drawer: new Drawer(
         child: new ListView(children: <Widget>[
           new UserAccountsDrawerHeader(
-            accountName: new Text('Exercises'),
-            accountEmail: new Text('username@gmail'),
+            accountName: new Text("Exercise App"),
             decoration: new BoxDecoration(
                 image: new DecorationImage(
               fit: BoxFit.fill,

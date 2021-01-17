@@ -2,7 +2,7 @@ import 'package:dispositivos_moviles/User/app_user.dart';
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:dispositivos_moviles/User/information/user_information.dart';
-import 'package:dispositivos_moviles/global_elements/background.dart';
+
 
 class UserProfile extends StatelessWidget {
   AppUser appUser;
@@ -65,7 +65,7 @@ class UserProfile extends StatelessWidget {
                 onPressed: appUser.signOut,
                 child: Icon(Icons.exit_to_app),
               ),
-              
+
             ],
 
           )
