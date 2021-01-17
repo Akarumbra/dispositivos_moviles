@@ -2,6 +2,7 @@ import 'dart:math';
 import 'dart:ui' as ui;
 
 import 'package:decimal/decimal.dart';
+import 'package:dispositivos_moviles/global_elements/navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class Calculator extends StatelessWidget {
@@ -114,7 +115,7 @@ class IMC extends State<_Calculator> {
         backgroundColor: Color(0xFFf01DFD7),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
-          onPressed: () {},
+          onPressed: () {GoBack();},
         ),
       ),
       body: Form(
@@ -290,6 +291,13 @@ class IMC extends State<_Calculator> {
                   )
                 ],
               ))),
+    );
+  }
+  void GoBack() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => NavigationBar(),
+      ),
     );
   }
 }

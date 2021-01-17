@@ -14,6 +14,8 @@ class NavigationBar extends StatefulWidget {
 
 class _NavigationBar extends State<NavigationBar> {
 
+  AppUser appUser;
+
   int indexScreen = 0;
 
   final List<Widget> widgetsChildren = [
@@ -24,6 +26,7 @@ class _NavigationBar extends State<NavigationBar> {
 
     setState(() {
       indexScreen = index;
+      appUser = AppUser();
     });
   }
 

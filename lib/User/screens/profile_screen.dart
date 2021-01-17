@@ -34,7 +34,6 @@ class UserProfile extends StatelessWidget {
     if(!snapshot.hasData || snapshot.hasError) {
       print("error with login");
       return Container(
-        color: Colors.white,
         child: Column(
           children: <Widget>[
             CircularProgressIndicator(),
