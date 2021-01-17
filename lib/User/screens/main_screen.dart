@@ -17,13 +17,13 @@ class _MainScreen extends State<MainScreen> {
   List<Container> list = List();
   var arr = [
     {"name": "Deadlift", "img": "gym.jpeg", "sport": "img/infodeadlift.jpg"},
-    {"name": "Chest", "img": "pressbanca.jpg", "sport": "img/benchinfo.png"},
-    {"name": "Back", "img": "remo.jpeg", "sport": "Row with bar, 10 reps"},
     {
-      "name": "Biceps",
-      "img": "curl.jpg",
-      "sport": "Workout with bar 10 reps of 80kg"
+      "name": "Bench press",
+      "img": "pressbanca.jpg",
+      "sport": "img/benchinfo.png"
     },
+    {"name": "Row with T bar", "img": "remo.jpeg", "sport": "img/inforow.jpg"},
+    {"name": "Biceps Curl", "img": "curl.jpg", "sport": "img/infocurl.jpg"},
   ];
 
   _list() async {
@@ -83,7 +83,7 @@ class _MainScreen extends State<MainScreen> {
             decoration: new BoxDecoration(
                 image: new DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('img/pressbanca.jpg'),
+              image: AssetImage('img/gold.png'),
             )),
           ),
           new Divider(),
