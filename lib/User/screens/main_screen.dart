@@ -24,6 +24,17 @@ class _MainScreen extends State<MainScreen> {
     },
     {"name": "Row with T bar", "img": "remo.jpeg", "sport": "img/inforow.jpg"},
     {"name": "Biceps Curl", "img": "curl.jpg", "sport": "img/infocurl.jpg"},
+    {
+      "name": "Skull crasher",
+      "img": "pressfrances.jpg",
+      "sport": "img/infopressf.jpg"
+    },
+    {"name": "Squats", "img": "squat.jpg", "sport": "img/infosquat.jpg"},
+    {
+      "name": "Pull over",
+      "img": "pullover.jpg",
+      "sport": "img/infopullover.jpg"
+    },
   ];
 
   _list() async {
@@ -105,7 +116,7 @@ class _MainScreen extends State<MainScreen> {
         ]),
       ),
       body: new GridView.count(
-        crossAxisCount: 1,
+        crossAxisCount: 2,
         mainAxisSpacing: 1.0,
         childAspectRatio: 0.899,
         children: list,

@@ -69,6 +69,11 @@ flutter:
     - img/infocurl.jpg
     - img/inforow.jpg
     - img/gold.png
+    - img/infopressf.jpg
+    - img/squat.jpg
+    - img/infosquat.jpg
+    - img/pullover.jpg
+    - img/infopullover.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
